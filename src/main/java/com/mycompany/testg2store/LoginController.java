@@ -47,14 +47,14 @@ public class LoginController implements Initializable {
         return new Image(urlString);
     }
 
-    @FXML
-    private void btnForgetPassword(MouseEvent event) {
-        Alert a = new Alert(Alert.AlertType.INFORMATION);
-        a.setTitle("Quên mật khẩu");
-        a.setContentText("Đang cập nhật...");
-        a.setHeaderText(null);
-        a.show();
-    }
+//    @FXML
+//    private void btnForgetPassword(MouseEvent event) {
+//        Alert a = new Alert(Alert.AlertType.INFORMATION);
+//        a.setTitle("Quên mật khẩu");
+//        a.setContentText("Đang cập nhật...");
+//        a.setHeaderText(null);
+//        a.show();
+//    }
 
     @FXML
     private void btnLogin(MouseEvent event) throws IOException {
