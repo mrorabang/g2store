@@ -1,0 +1,16 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 21, 2024, 9:34:22 PM
+    Author     : Dangm
+*/
+
+.btnMenu:hover {
+    -fx-background-color: #f0ecf4; /* Màu nền khi hover */
+}
+
+.tableView{
+    -fx-background-color: white;
+}

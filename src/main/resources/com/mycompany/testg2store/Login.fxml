@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="400.0" maxWidth="800.0" minHeight="400.0" minWidth="800.0" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.testg2store.LoginController">
+   <children>
+      <ImageView fx:id="imgLogin" fitHeight="350.0" fitWidth="350.0" layoutX="50.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="400.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: white;">
+         <children>
+            <Text layoutX="50.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ĐĂNG NHẬP" textAlignment="CENTER" wrappingWidth="299.9999999999999">
+               <font>
+                  <Font name="Calibri Bold" size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="50.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên đăng nhập">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="textUser" layoutX="50.0" layoutY="85.0" prefHeight="50.0" prefWidth="300.0" text="g2store">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Text layoutX="50.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="textPassword" layoutX="50.0" layoutY="184.0" prefHeight="50.0" prefWidth="300.0" text="123456">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="textField" layoutX="50.0" layoutY="184.0" prefHeight="50.0" prefWidth="300.0" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="236.0" layoutY="240.0" onMouseClicked="#btnForgetPassword" prefHeight="20.0" prefWidth="114.0" text="Quên mật khẩu?" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label alignment="CENTER" layoutX="50.0" layoutY="286.0" onMouseClicked="#btnLogin" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: BLACK; -fx-background-radius: 25px;" text="ĐĂNG NHẬP" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <CheckBox fx:id="checkboxShowHidePass" layoutX="51.0" layoutY="241.0" mnemonicParsing="false" onAction="#ShowHidePass" prefHeight="17.0" prefWidth="100.0" style="-fx-background-color: white;" text="Hiện mật khẩu" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

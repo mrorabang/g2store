@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.testg2store.PrimaryController">
+    <children>
+        <HBox prefHeight="800.0" prefWidth="1400.0">
+            <children>
+                <VBox prefHeight="800.0" prefWidth="300.0">
+                    <children>
+                        <HBox prefHeight="98.0" prefWidth="291.0" style="-fx-border-color: black; -fx-background-color: white;">
+                            <children>
+                        <AnchorPane prefHeight="83.0" prefWidth="302.0">
+                           <children>
+                                      <ImageView fitHeight="50.0" fitWidth="60.0" layoutX="22.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: grey;">
+                                 <image>
+                                    <Image url="@../../../img/profile.png" />
+                                 </image>
+                              </ImageView>
+                                        <Label layoutX="86.0" layoutY="13.0" prefHeight="30.0" prefWidth="117.0" text="Minh Quân" textAlignment="JUSTIFY" textFill="#00a41e">
+                                            <font>
+                                                <Font name="Cambria Italic" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="86.0" layoutY="44.0" text="Quản lý kho" underline="true">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </HBox>
+                        <HBox prefHeight="641.0" prefWidth="300.0" style="-fx-background-color: white;">
+                            <children>
+                                <ScrollPane prefHeight="636.0" prefWidth="358.0" style="-fx-background-color: white;">
+                                    <content>
+                                        <VBox prefHeight="658.0" prefWidth="278.0" style="-fx-background-color: white;">
+                                            <children>
+                                                <HBox prefHeight="90.0" prefWidth="285.0" style="-fx-background-color: white;" styleClass="btnMenu" stylesheets="@style.css">
+                                                    <children>
+                                          <AnchorPane prefHeight="50.0" prefWidth="291.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" styleClass="btnMenu" stylesheets="@style.css">
+                                             <children>
+                                                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="52.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/building.png" />
+                                                   </image>
+                                                </ImageView>
+                                                              <Label fx:id="btnTrangChu" alignment="CENTER" layoutX="87.0" layoutY="18.0" prefHeight="40.0" prefWidth="180.0" text="Trang chủ" textAlignment="CENTER" textFill="#00721b" textOverrun="CLIP">
+                                                                  <font>
+                                                                      <Font name="Calibri" size="25.0" />
+                                                                  </font>
+                                                              </Label>
+                                             </children>
+                                          </AnchorPane>
+                                                    </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                                </HBox>
+                                                <HBox prefHeight="90.0" prefWidth="285.0" style="-fx-background-color: white;" styleClass="btnMenu" stylesheets="@style.css">
+                                                    <children>
+                                          <AnchorPane prefHeight="50.0" prefWidth="291.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" styleClass="btnMenu" stylesheets="@style.css">
+                                             <children>
+                                                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="52.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add-to-cart.png" />
+                                                   </image>
+                                                </ImageView>
+                                                              <Label fx:id="btnBanHang" alignment="CENTER" layoutX="87.0" layoutY="17.0" prefHeight="40.0" prefWidth="180.0" text="Bán hàng" textFill="#007213">
+                                                                  <font>
+                                                                      <Font name="Calibri" size="25.0" />
+                                                                  </font>
+                                                              </Label>
+                                             </children>
+                                          </AnchorPane>
+                                                    </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                                </HBox>
+                                                <HBox prefHeight="90.0" prefWidth="285.0" style="-fx-background-color: white;" styleClass="btnMenu" stylesheets="@style.css">
+                                                    <children>
+                                          <AnchorPane prefHeight="54.0" prefWidth="291.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" styleClass="btnMenu" stylesheets="@style.css">
+                                             <children>
+                                                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="52.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/warehouse.png" />
+                                                   </image>
+                                                </ImageView>
+                                                              <Label fx:id="btnNhapHang" alignment="CENTER" layoutX="87.0" layoutY="18.0" prefHeight="40.0" prefWidth="180.0" text="Nhập hàng" textFill="#007213">
+                                                                  <font>
+                                                                      <Font name="Calibri" size="25.0" />
+                                                                  </font>
+                                                              </Label>
+                                             </children>
+                                          </AnchorPane>
+                                                    </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                                </HBox>
+                                                <HBox prefHeight="90.0" prefWidth="285.0" style="-fx-background-color: white;" styleClass="btnMenu" stylesheets="@style.css">
+                                                    <children>
+                                          <AnchorPane prefHeight="54.0" prefWidth="291.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" styleClass="btnMenu" stylesheets="@style.css">
+                                             <children>
+                                                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="52.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/customer.png" />
+                                                   </image>
+                                                </ImageView>
+                                                              <Label fx:id="btnKhachHang" alignment="CENTER" layoutX="87.0" layoutY="17.0" prefHeight="40.0" prefWidth="180.0" text="Khách hàng" textFill="#007213">
+                                                                  <font>
+                                                                      <Font name="Calibri" size="25.0" />
+                                                                  </font>
+                                                              </Label>
+                                             </children>
+                                          </AnchorPane>
+                                                    </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                                </HBox>
+                                                <HBox prefHeight="90.0" prefWidth="285.0" style="-fx-background-color: white;" styleClass="btnMenu" stylesheets="@style.css">
+                                                    <children>
+                                          <AnchorPane layoutX="52.0" layoutY="10.0" prefHeight="50.0" prefWidth="291.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" styleClass="btnMenu" stylesheets="@style.css">
+                                             <children>
+                                                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="52.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/division.png" />
+                                                   </image>
+                                                </ImageView>
+                                                              <Label fx:id="btnNhanVien" alignment="CENTER" layoutX="87.0" layoutY="17.0" prefHeight="40.0" prefWidth="180.0" text="Nhân viên" textFill="#007213">
+                                                                  <font>
+                                                                      <Font name="Calibri" size="25.0" />
+                                                                  </font>
+                                                              </Label>
+                                             </children>
+                                          </AnchorPane>
+                                                    </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                                </HBox>
+                                                <HBox prefHeight="90.0" prefWidth="285.0" style="-fx-background-color: white;" styleClass="btnMenu" stylesheets="@style.css">
+                                                    <children>
+                                          <AnchorPane prefHeight="43.0" prefWidth="261.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" styleClass="btnMenu" stylesheets="@style.css">
+                                             <children>
+                                                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="52.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/verified-account.png" />
+                                                   </image>
+                                                </ImageView>
+                                                              <Label fx:id="btnTaiKhoan" alignment="CENTER" layoutX="87.0" layoutY="18.0" prefHeight="40.0" prefWidth="199.0" text="Tài khoản" textFill="#007213">
+                                                                  <font>
+                                                                      <Font name="Calibri" size="25.0" />
+                                                                  </font>
+                                                              </Label>
+                                             </children>
+                                          </AnchorPane>
+                                                    </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                                </HBox>
+                                                <HBox prefHeight="90.0" prefWidth="285.0" style="-fx-background-color: white;" styleClass="btnMenu" stylesheets="@style.css">
+                                                    <children>
+                                          <AnchorPane prefHeight="50.0" prefWidth="307.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" styleClass="btnMenu" stylesheets="@style.css">
+                                             <children>
+                                                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="52.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/statistics.png" />
+                                                   </image>
+                                                </ImageView>
+                                                              <Label fx:id="btnBaoCao" alignment="CENTER" layoutX="87.0" layoutY="18.0" prefHeight="40.0" prefWidth="180.0" text="Báo cáo" textFill="#007213">
+                                                                  <font>
+                                                                      <Font name="Calibri" size="25.0" />
+                                                                  </font>
+                                                              </Label>
+                                             </children>
+                                          </AnchorPane>
+                                                    </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                                </HBox>
+                                                <HBox prefHeight="90.0" prefWidth="285.0" style="-fx-background-color: white;" styleClass="btnMenu" stylesheets="@style.css">
+                                                    <children>
+                                          <AnchorPane prefHeight="43.0" prefWidth="90.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" styleClass="btnMenu" stylesheets="@style.css">
+                                             <children>
+                                                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="52.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/user%20(1).png" />
+                                                   </image>
+                                                </ImageView>
+                                                              <Label fx:id="btnPhanQuyen" alignment="CENTER" layoutX="87.0" layoutY="17.0" prefHeight="40.0" prefWidth="199.0" text="Phân quyền" textFill="#007213">
+                                                                  <font>
+                                                                      <Font name="Calibri" size="25.0" />
+                                                                  </font>
+                                                              </Label>
+                                             </children>
+                                          </AnchorPane>
+                                                    </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                                </HBox>
+                                    <HBox prefHeight="90.0" prefWidth="285.0" style="-fx-background-color: white;" styleClass="btnMenu" stylesheets="@style.css">
+                                       <children>
+                                          <AnchorPane prefHeight="11.0" prefWidth="288.0" style="-fx-border-color: green; -fx-border-radius: 15px; -fx-background-radius: 15px;" styleClass="btnMenu" stylesheets="@style.css">
+                                             <children>
+                                                <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="52.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/more.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="btnPhanQuyen1" alignment="CENTER" layoutX="87.0" layoutY="18.0" prefHeight="40.0" prefWidth="199.0" text="Khác" textFill="#007213">
+                                                   <font>
+                                                      <Font name="Calibri" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </HBox>
+                                            </children>
+                                        </VBox>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </HBox>
+                        <HBox onMouseClicked="#btnLogOut" prefHeight="76.0" prefWidth="291.0" style="-fx-border-color: black; -fx-background-color: white;">
+      
+                            <children>
+                        <AnchorPane prefHeight="80.0" prefWidth="80.0">
+                           <children>
+                                      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="48.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/turn-off.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                                <Label alignment="CENTER" prefHeight="69.0" prefWidth="216.0" text="Đăng xuất" textFill="RED">
+                                    <font>
+                                        <Font name="Calibri Bold" size="25.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox prefHeight="831.0" prefWidth="1118.0">
+                    <children>
+                        <HBox prefHeight="70.0" prefWidth="1109.0" style="-fx-background-color: white;">
+                            <children>
+                                <VBox prefHeight="84.0" prefWidth="80.0" style="-fx-border-color: green;" styleClass="btnMenu" stylesheets="@style.css">
+                                    <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                              <ImageView fx:id="iconAdd" fitHeight="60.0" fitWidth="60.0" layoutX="9.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="80.0" text="THÊM" textFill="#3300ff">
+                                            <font>
+                                                <Font name="Calibri Bold" size="19.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </VBox>
+                                <VBox onMouseClicked="#btnDetail" prefHeight="84.0" prefWidth="89.0" style="-fx-border-color: green;" styleClass="btnMenu" stylesheets="@style.css">
+                                    <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                              <ImageView fx:id="iconDetail" fitHeight="60.0" fitWidth="84.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/info%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                                        <Label alignment="CENTER" prefHeight="59.0" prefWidth="116.0" text="CHI TIẾT" textFill="#3300ff">
+                                            <font>
+                                                <Font name="Calibri Bold" size="19.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </VBox>
+                                <VBox onMouseClicked="#btnDeleteBill" prefHeight="84.0" prefWidth="99.0" style="-fx-border-color: green;" styleClass="btnMenu" stylesheets="@style.css">
+                                    <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                              <ImageView fitHeight="60.0" fitWidth="81.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/trash-bin.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="99.0" text="HỦY PHIẾU" textFill="#3300ff">
+                                            <font>
+                                                <Font name="Calibri Bold" size="19.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </VBox>
+                                <VBox fx:id="btnExportExcel" prefHeight="84.0" prefWidth="108.0" style="-fx-border-color: green;" styleClass="btnMenu" stylesheets="@style.css">
+                                    <children>
+                              <AnchorPane prefHeight="60.0" prefWidth="103.0">
+                                 <children>
+                                              <ImageView fitHeight="60.0" fitWidth="108.0" layoutX="26.0" onMouseClicked="#btnExportExcel" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/excel.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                                        <Label alignment="CENTER" prefHeight="39.0" prefWidth="204.0" text="XUẤT EXCEL" textFill="#3300ff">
+                                            <font>
+                                                <Font name="Calibri Bold" size="19.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </VBox>
+                                <VBox fx:id="btnExportPDF" prefHeight="84.0" prefWidth="90.0" style="-fx-border-color: green;" styleClass="btnMenu" stylesheets="@style.css">
+                                    <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                              <ImageView fitHeight="60.0" fitWidth="89.0" layoutX="14.0" onMouseClicked="#btnExportPDF" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/pdf.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                                        <Label alignment="CENTER" prefHeight="39.0" prefWidth="204.0" text="XUẤT PDF" textFill="#3300ff">
+                                            <font>
+                                                <Font name="Calibri Bold" size="19.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </VBox>
+                                <AnchorPane prefHeight="84.0" prefWidth="577.0">
+                                    <children>
+                                        <ComboBox fx:id="comboBoxSearch" layoutX="160.0" layoutY="15.0" prefHeight="40.0" prefWidth="135.0" promptText="Tất cả" style="-fx-background-color: white; -fx-border-color: grey;" />
+                                        <TextField fx:id="textSearch" layoutX="304.0" layoutY="14.0" prefHeight="43.0" prefWidth="239.0" promptText="Nhập nội dung tìm kiếm...">
+                                            <font>
+                                                <Font size="13.0" />
+                                            </font>
+                                        </TextField>
+                              <AnchorPane layoutX="551.0" layoutY="16.0" onMouseClicked="#btnRefresh" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: white; -fx-border-color: green; -fx-border-radius: 5px;">
+                                 <children>
+                                    <Label layoutX="36.0" layoutY="12.0" text="Tải lại">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="8.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/refresh.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="764.0" prefWidth="1109.0">
+                            <children>
+                                <AnchorPane prefHeight="662.0" prefWidth="253.0" style="-fx-border-color: black; -fx-background-color: white;">
+                                    <children>
+                                        <Label layoutX="20.0" layoutY="30.0" prefHeight="20.0" prefWidth="101.0" text="Khách hàng:">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="comboBoxCustomer" layoutX="18.0" layoutY="54.0" prefHeight="43.0" prefWidth="218.0" promptText="Tất cả" style="-fx-background-color: white; -fx-border-color: grey;" />
+                                        <Label layoutX="21.0" layoutY="123.0" prefHeight="25.0" prefWidth="119.0" text="Nhân viên xuất">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <ComboBox fx:id="comboBoxEmployee" layoutX="17.0" layoutY="148.0" prefHeight="43.0" prefWidth="218.0" promptText="Tất cả" style="-fx-background-color: white; -fx-border-color: grey;" />
+                                        <Label layoutX="21.0" layoutY="492.0" prefHeight="25.0" prefWidth="135.0" text="Đến số tiền (VND)">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="21.0" layoutY="402.0" prefHeight="25.0" prefWidth="119.0" text="Từ số tiền (VND)">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="21.0" layoutY="311.0" prefHeight="20.0" prefWidth="101.0" text="Đến ngày">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="20.0" layoutY="220.0" prefHeight="20.0" prefWidth="101.0" text="Từ ngày">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <DatePicker fx:id="dateFrom" layoutX="19.0" layoutY="245.0" prefHeight="43.0" prefWidth="218.0" />
+                                        <DatePicker fx:id="dateTo" layoutX="19.0" layoutY="336.0" prefHeight="43.0" prefWidth="218.0" />
+                                        <TextField fx:id="totalFrom" layoutX="18.0" layoutY="427.0" prefHeight="43.0" prefWidth="218.0" />
+                                        <TextField fx:id="totalTo" layoutX="18.0" layoutY="517.0" prefHeight="43.0" prefWidth="218.0" />
+                                    </children>
+                                </AnchorPane>
+                                <ScrollPane prefHeight="718.0" prefWidth="856.0" style="-fx-border-color: black; -fx-background-color: white;">
+                                    <content>
+                                        <TableView fx:id="tableView" prefHeight="701.0" prefWidth="841.0" styleClass="custom-table-view" stylesheets="@style.css">
+                                            <columns>
+                                                <TableColumn fx:id="stt" prefWidth="64.3333740234375" text="STT" />
+                                                <TableColumn fx:id="orderId" prefWidth="147.0" text="MÃ PHIẾU XUẤT" />
+                                                <TableColumn fx:id="customerPhone" minWidth="0.0" prefWidth="175.0" text="SỐ MÁY KHÁCH HÀNG" />
+                                                <TableColumn fx:id="employeeId" prefWidth="151.0" text="MÃ NHÂN VIÊN" />
+                                                <TableColumn fx:id="time" minWidth="0.0" prefWidth="152.0" text="THỜI GIAN" />
+                                                <TableColumn fx:id="total" prefWidth="152.0" text="TỔNG TIỀN" />
+                                            </columns>
+                                        </TableView>
+
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+      <VBox fx:id="btnExportPDF1" layoutX="618.0" layoutY="-132.0" prefHeight="84.0" prefWidth="90.0" style="-fx-border-color: green;">
+         <children>
+            <Label alignment="CENTER" prefHeight="39.0" prefWidth="204.0" text="XUẤT PDF" textFill="#3300ff">
+               <font>
+                  <Font name="Calibri Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </VBox>
+    </children>
+</AnchorPane>
