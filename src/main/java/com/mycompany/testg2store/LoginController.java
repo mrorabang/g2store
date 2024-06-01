@@ -47,20 +47,20 @@ public class LoginController implements Initializable {
         return new Image(urlString);
     }
 
-//    @FXML
-//    private void btnForgetPassword(MouseEvent event) {
-//        Alert a = new Alert(Alert.AlertType.INFORMATION);
-//        a.setTitle("Quên mật khẩu");
-//        a.setContentText("Đang cập nhật...");
-//        a.setHeaderText(null);
-//        a.show();
-//    }
+    @FXML
+    private void btnForgetPassword(MouseEvent event) {
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setTitle("Quên mật khẩu");
+        a.setContentText("Đang cập nhật...");
+        a.setHeaderText(null);
+        a.show();
+    }
 
     @FXML
     private void btnLogin(MouseEvent event) throws IOException {
         Stage stage = (Stage) imgLogin.getScene().getWindow(); // Lấy đối tượng Stage từ ImageView
         stage.setFullScreen(true); // Đặt cửa sổ ứng dụng thành chế độ toàn màn hình
-        App.setRoot("primary", 1400, 800);
+        App.setRoot("primary", 1400, 800,"G2Store App");
     }
 
     @FXML

@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import javafx.stage.StageStyle;
 
 /**
  * JavaFX App
@@ -17,17 +18,24 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 1400, 800);
+        scene = new Scene(loadFXML("login"), 800, 400);
         stage.setScene(scene);
+        stage.setTitle("Đăng nhập");
+        stage.centerOnScreen();
+        stage.initStyle(StageStyle.DECORATED);
         stage.show();
+
     }
 
-    static void setRoot(String fxml, int width, int height) throws IOException {
+    static void setRoot(String fxml, int width, int height, String title) throws IOException {
         Parent root = loadFXML(fxml);
         scene.setRoot(root);
         Stage stage = (Stage) scene.getWindow();
         stage.setWidth(width);
         stage.setHeight(height);
+        stage.setTitle(title);
+//        stage.initStyle(StageStyle.DECORATED);
+        stage.centerOnScreen();
     }
 
     private static Parent loadFXML(String fxml) throws IOException {

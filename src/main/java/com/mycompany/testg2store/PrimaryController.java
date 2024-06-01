@@ -687,7 +687,6 @@ public class PrimaryController {
     }
 
     @FXML
-
     private void btnLogOut(MouseEvent event) {
         // Tạo cửa sổ confirm
         Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -719,7 +718,7 @@ public class PrimaryController {
         confirmAlert.showAndWait().ifPresent(response -> {
             if (response == ButtonType.OK) {
                 try {
-                    App.setRoot("Login", 800, 400);
+                    App.setRoot("Login", 800, 400,"Đăng nhập");
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
