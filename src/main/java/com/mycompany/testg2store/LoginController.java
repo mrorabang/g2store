@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class LoginController implements Initializable {
@@ -27,24 +28,25 @@ public class LoginController implements Initializable {
     private TextField textField;
     @FXML
     private CheckBox checkboxShowHidePass;
+    @FXML
+    private StackPane pageDN;
+    @FXML
+    private TextField textUser1;
+    @FXML
+    private PasswordField textPassword1;
+    @FXML
+    private TextField textField1;
+    @FXML
+    private CheckBox checkboxShowHidePass1;
+    @FXML
+    private PasswordField textPassword11;
+    @FXML
+    private StackPane pageDK;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        pageDK.setVisible(false);
         textField.setVisible(false);  // Ensure textField is initially hidden
-
-        // Set hình ảnh từ URL
-        try {
-            String imageUrl = "https://images.assetsdelivery.com/compings_v2/vectorv/vectorv1904/vectorv190412711.jpg";
-            Image image = loadImageFromURL(imageUrl);
-            imgLogin.setImage(image);
-        } catch (IOException e) {
-            e.printStackTrace();
-            showErrorAlert("Lỗi khi tải ảnh", "Không thể tải ảnh từ URL.");
-        }
-    }
-
-    private Image loadImageFromURL(String urlString) throws IOException {
-        return new Image(urlString);
     }
 
     @FXML
@@ -60,7 +62,7 @@ public class LoginController implements Initializable {
     private void btnLogin(MouseEvent event) throws IOException {
         Stage stage = (Stage) imgLogin.getScene().getWindow(); // Lấy đối tượng Stage từ ImageView
         stage.setFullScreen(true); // Đặt cửa sổ ứng dụng thành chế độ toàn màn hình
-        App.setRoot("primary", 1400, 800,"G2Store App");
+        App.setRoot("primary", 1400, 800, "G2Store App");
     }
 
     @FXML
@@ -84,5 +86,18 @@ public class LoginController implements Initializable {
         alert.setContentText(content);
         alert.setHeaderText(null);
         alert.show();
+    }
+
+    @FXML
+    private void btnDangKy(MouseEvent event) {
+        pageDN.setVisible(false);
+        pageDK.setVisible(true);
+
+    }
+
+    @FXML
+    private void btnDangNhap(MouseEvent event) {
+        pageDN.setVisible(true);
+        pageDK.setVisible(false);
     }
 }
